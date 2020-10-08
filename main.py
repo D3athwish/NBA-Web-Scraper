@@ -4,8 +4,8 @@ from selenium import webdriver
 #Uporabnik vnese ime igralca
 userInput = input("Enter player name: ")
 
-
 driver = webdriver.Firefox(executable_path='D:\GeckoDriver\geckodriver.exe')
+
 #Driver zažene spodnji URL
 driver.get("https://stats.nba.com/")
 
