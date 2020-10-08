@@ -39,9 +39,9 @@ time.sleep(5)
 for x in range(1, 20):
     elementDate = driver.find_element_by_xpath(
         "/html/body/main/div[2]/div/div/div[3]/div/div/div/nba-stat-table[1]/div[2]/div[1]/table/tbody/tr[" + str(x) + "]/td[1]")
-    print(elementDate.text)
 
     elementPA = driver.find_element_by_xpath("/html/body/main/div[2]/div/div/div[3]/div/div/div/nba-stat-table[1]/div[2]/div[1]/table/tbody/tr[" + str(x) +"]/td[10]")
-    print(elementPA.text)
+
+    print(elementDate.text + " " + elementPA.text)
 
     print("\n")
