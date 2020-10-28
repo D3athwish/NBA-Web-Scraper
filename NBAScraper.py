@@ -22,7 +22,7 @@ def element_class(string, user):
 # User inputs player name
 userInput = input("Enter NBA player name: ")
 
-# Set GeckoDriver directory
+# Open Firefox
 driver = webdriver.Firefox()
 
 # Open NBA players website, instead of nba stats due to website change
