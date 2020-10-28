@@ -3289,3 +3289,42 @@ console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Err
 1603901512043	Marionette	WARN	TLS certificate errors will be ignored for this session
 Can't find symbol 'eglSwapBuffersWithDamageEXT'.
 JavaScript error: https://cdn.cookielaw.org/scripttemplates/6.7.0/otBannerSdk.js, line 7: TypeError: o is undefined
+1603902684809	Marionette	INFO	Stopped listening on port 51197
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+Temp\\rust_mozprofile58LgBA"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603902255656	Marionette	INFO	Listening on port 52056
+1603902255884	Marionette	WARN	TLS certificate errors will be ignored for this session
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+1603902299595	Marionette	INFO	Stopped listening on port 52056
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1603902304274	geckodriver	INFO	Listening on 127.0.0.1:52328
+1603902307320	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\gaspe\\AppData\\Local\\Temp\\rust_mozprofileJoZtGM"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603902309778	Marionette	INFO	Listening on port 52337
+1603902309990	Marionette	WARN	TLS certificate errors will be ignored for this session
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+JavaScript error: https://static.adsafeprotected.com/main.gr.19.8.140.js, line 322: TypeError: d is undefined
+JavaScript error: https://static.adsafeprotected.com/main.gr.19.8.140.js, line 322: TypeError: d is undefined
+JavaScript error: https://cdn.cookielaw.org/scripttemplates/6.7.0/otBannerSdk.js, line 7: TypeError: o is undefined
+1603903051838	Marionette	INFO	Stopped listening on port 52337
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+

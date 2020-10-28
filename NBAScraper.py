@@ -7,10 +7,10 @@ def x_path(string):
     return driver.find_element_by_xpath(string)
 
 
-def element_Id(string):
+def element_id(string):
     time.sleep(10)
     driver.find_element_by_id(string).click()
-    return 0
+    return ""
 
 
 def element_class(string):
@@ -18,7 +18,7 @@ def element_class(string):
     return driver.find_element_by_class_name(string).click()
 
 
-def getRowNumber():
+def get_row_number():
     return len(driver.find_elements_by_css_selector("nba-stat-table.stats-table-next:nth-child(8) > div:nth-child(2) "
                                                     "> div:nth-child(1) > table:nth-child(1) > "
                                                     "tbody:nth-child(2) > tr")) + 1
@@ -34,7 +34,7 @@ driver = webdriver.Firefox()
 driver.get("https://www.nba.com/players")
 
 # Click Cookie Policy accept button
-element_Id("onetrust-accept-btn-handler")
+element_id("onetrust-accept-btn-handler")
 
 # Click searchbox to start searching, and input player name into searchbox
 element_class("border").send_keys(userInput)
@@ -47,7 +47,7 @@ x_path("/html/body/div[1]/div[2]/div[3]/section/div/div[2]/div["
 x_path("/html/body/div[1]/div[2]/div[3]/div/div[1]/div/ul/li[2]/a").click()
 
 # Get number of rows and loop over them
-for _ in range(1, getRowNumber()):
+for _ in range(1, get_row_number()):
     elementDate = x_path(
         "/html/body/main/div/div/div/div[4]/div/div/div/div/nba-stat-table[1]/div[2]/div[1]/table/tbody/tr[" + str(_) +
         "]/td[1]")
