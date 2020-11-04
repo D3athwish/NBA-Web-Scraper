@@ -59,3 +59,5 @@ for _ in range(1, row_number):
         "]/td[10]")
 
     print(elementDate.text + " " + elementPA.text + "\n")
+
+driver.close()
