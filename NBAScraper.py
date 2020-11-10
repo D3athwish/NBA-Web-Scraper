@@ -19,6 +19,15 @@ def element_class(string, user):
     return 0
 
 
+def check_for_nba_popup():
+    try:
+        x_path("/html/body/div[3]/div[2]/button").click()
+        x_path("/html/body/div[2]/div[2]/button").click()
+
+    except Exception:
+        pass
+
+
 # User inputs player name
 userInput = input("Enter NBA player name: ")
 
@@ -38,6 +47,9 @@ element_class("border", userInput)
 x_path("/html/body/div[1]/div[2]/div[3]/section/div/div[2]/div["
        "2]/div/div/div/table/tbody/tr/td[1]/a/div[2]/p[1]").click()
 
+# Check if popup is present, if it is close it, if not pass
+check_for_nba_popup()
+
 # Click stats button to navigate to NBA players stats
 x_path("/html/body/div[1]/div[2]/div[3]/div/div[1]/div/ul/li[2]/a").click()
 
@@ -46,7 +58,6 @@ time.sleep(10)
 # Get number of rows
 row_number_string = "nba-stat-table.stats-table-next:nth-child(8) > div:nth-child(2)> div:nth-child(1) > " \
                     "table:nth-child(1) > tbody:nth-child(2) > tr"
-
 row_number = len(driver.find_elements_by_css_selector(row_number_string)) + 1
 
 # Loop over rows
