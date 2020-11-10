@@ -7,10 +7,12 @@ def x_path(string):
     return driver.find_element_by_xpath(string)
 
 
-def element_id(string):
+def check_for_cookie_popup(string):
     time.sleep(10)
-    driver.find_element_by_id(string).click()
-    return ""
+    try:
+        driver.find_element_by_id(string).click()
+    except Exception:
+        pass
 
 
 def element_class(string, user):
@@ -19,11 +21,9 @@ def element_class(string, user):
     return 0
 
 
-def check_for_nba_popup():
+def check_for_popup(button1):
     try:
-        x_path("/html/body/div[3]/div[2]/button").click()
-        x_path("/html/body/div[2]/div[2]/button").click()
-
+        x_path(button1).click()
     except Exception:
         pass
 
@@ -38,7 +38,7 @@ driver = webdriver.Firefox()
 driver.get("https://www.nba.com/players")
 
 # Click Cookie Policy accept button
-element_id("onetrust-accept-btn-handler")
+check_for_cookie_popup("onetrust-accept-btn-handler")
 
 # Click searchbox to start searching, and input player name into searchbox
 element_class("border", userInput)
@@ -48,7 +48,9 @@ x_path("/html/body/div[1]/div[2]/div[3]/section/div/div[2]/div["
        "2]/div/div/div/table/tbody/tr/td[1]/a/div[2]/p[1]").click()
 
 # Check if popup is present, if it is close it, if not pass
-check_for_nba_popup()
+check_for_popup("/html/body/div[4]/div[2]/button")
+check_for_popup("/html/body/div[3]/div[2]/button")
+check_for_popup("/html/body/div[2]/div[2]/button")
 
 # Click stats button to navigate to NBA players stats
 x_path("/html/body/div[1]/div[2]/div[3]/div/div[1]/div/ul/li[2]/a").click()
